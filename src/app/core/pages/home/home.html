@@ -1,0 +1,77 @@
+<div class="hero-section position-relative">
+  <div class="custom-carousel">
+    <img [src]="images[currentImage]" class="carousel-img" alt="Travel Banner" />
+  </div>
+
+  <div
+    class="hero-overlay position-absolute top-50 start-50 translate-middle d-flex flex-lg-row flex-column justify-content-center align-items-center text-white w-100 px-3 px-md-5"
+  >
+    <div class="hero-text-blur mb-4 me-lg-4 p-4 rounded-4 text-center text-lg-start">
+      <h1 class="display-5 fw-bold mb-3">Explore the World with Us</h1>
+      <p class="lead mb-0">
+        Let your soul wander — from tranquil beaches to majestic mountains, we plan your perfect escape.
+      </p>
+    </div>
+
+    <div class="hero-enquiry-blur p-4 rounded-4 shadow-lg w-100 w-md-75 w-lg-50">
+      <app-enquiry></app-enquiry>
+    </div>
+  </div>
+</div>
+
+<div id="packages" class="container my-5">
+  <h3 class="text-center text-primary fw-bold mb-4">Latest Tour Packages</h3>
+  <p class="text-center text-muted mb-5 w-75 mx-auto">
+    Choose from our curated packages designed for every explorer — beach vibes, mountain adventures, city escapes, and divine journeys.
+  </p>
+
+  <div class="row g-4">
+    <div class="col-md-4 col-sm-6" *ngFor="let pkg of packages">
+      <div class="card h-100 border-0 rounded-4 shadow tour-card overflow-hidden">
+        <div class="card-img-wrapper">
+          <img [src]="pkg.image" class="card-img-top" alt="package image" />
+          <div class="img-overlay">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill shadow-sm">
+              <!-- ₹{{ pkg.price }} / person -->
+            </span>
+          </div>
+        </div>
+
+        <div class="card-body bg-light text-center">
+          <h5 class="card-title text-primary fw-bold">{{ pkg.title }}</h5>
+          <p class="card-text text-muted small text-justify">{{ pkg.description }}</p>
+        </div>
+
+        <div class="card-footer bg-white text-center border-0 pb-4">
+          <button class="btn btn-outline-primary btn-sm me-2 rounded-pill">
+            <i class="bi bi-telephone"></i> Call
+          </button>
+          <button class="btn btn-success btn-sm rounded-pill">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <h2 class="text-center fw-bold text-primary mb-3">Popular Tour Places</h2>
+  <p class="text-center text-muted mb-5 w-75 mx-auto">
+    From serene landscapes to iconic landmarks — explore our most loved destinations that define wanderlust.
+  </p>
+
+  <div class="row g-4">
+    <div class="col-md-4 col-sm-6" *ngFor="let place of places">
+      <div class="card h-100 text-center shadow-lg border-0 rounded-4 place-card overflow-hidden" (click)="openPlace(place)">
+        <img [src]="place.image" class="card-img-top img-fluid" alt="{{ place.name }}">
+        <div class="card-body bg-gradient-light">
+          <h5 class="card-title fw-semibold text-primary mb-0">{{ place.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

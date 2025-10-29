@@ -1,0 +1,20 @@
+<div class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Our Travel Blogs</h2>
+  <p class="text-center text-muted mb-5">
+    Discover amazing destinations and travel inspiration for your next adventure ✈️
+  </p>
+
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let blog of blogs">
+      <div class="blog-card shadow-sm rounded overflow-hidden">
+        <img [src]="blog.image" class="img-fluid blog-img" alt="{{ blog.title }}" />
+        <div class="p-3">
+          <h5 class="fw-semibold">{{ blog.title }}</h5>
+          <p class="text-muted small mb-2">{{ blog.date }}</p>
+          <p class="text-secondary small">{{ blog.description }}</p>
+          <button class="btn btn-outline-primary btn-sm">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

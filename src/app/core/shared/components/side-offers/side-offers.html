@@ -1,0 +1,18 @@
+<div class="side-offers-container">
+  <h4 class="text-center mb-4 fw-bold text-primary">Exclusive Offers</h4>
+
+  <div class="offer-card mb-4" *ngFor="let offer of offers">
+    <div class="offer-img-wrapper position-relative">
+      <img [src]="offer.image" alt="{{ offer.name }}" class="offer-img rounded-top" />
+      <div class="offer-duration position-absolute top-0 start-0 m-2 px-3 py-1 rounded-pill text-white">
+        {{ offer.duration }}
+      </div>
+    </div>
+
+    <div class="offer-content p-3 text-center">
+      <h5 class="fw-semibold text-dark">{{ offer.name }}</h5>
+      <p class="text-muted mb-2">Price: <span class="text-success fw-bold">{{ offer.price }}</span></p>
+      <button class="btn btn-outline-primary btn-sm w-100">Read More</button>
+    </div>
+  </div>
+</div>

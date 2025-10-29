@@ -1,0 +1,30 @@
+.enquiry-form-container {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  max-width: 350px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* .enquiry-form-container label {
+  font-weight: 500;
+} */
+/* 
+.enquiry-form-container input {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  border-radius: 8px;
+  padding: 10px;
+} */
+
+.enquiry-form-container input::placeholder {
+  color: #777;
+}
+
+.enquiry-form-container button {
+  border-radius: 8px;
+  font-weight: 500;
+}

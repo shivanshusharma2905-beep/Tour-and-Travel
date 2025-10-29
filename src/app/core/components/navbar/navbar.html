@@ -1,0 +1,99 @@
+<div class="top-bar">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap small">
+    <div class="social-icons mb-1 mb-md-0">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <div class="contact-info text-end">
+      <i class="bi bi-envelope me-1 text-warning"></i> enquiry@sstourandtravel.com |
+      <i class="bi bi-telephone ms-2 me-1 text-warning"></i> +91 9534098040 |
+      <i class="bi bi-geo-alt ms-2 me-1 text-warning"></i> Lucknow, India
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" routerLink="/">
+      <i class="bi bi-airplane-fill me-2"></i>SS Tour & Travel
+    </a>
+
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse mt-2 mt-lg-0" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center text-lg-start">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+
+        <li
+          class="nav-item dropdown"
+          (mouseenter)="showPackages = true"
+          (mouseleave)="showPackages = false"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            [class.show]="showPackages"
+            aria-expanded="showPackages"
+            (click)="toggleDropdown('packages')"
+          >
+            Packages
+          </a>
+          <ul class="dropdown-menu" [class.show]="showPackages">
+            <li><a class="dropdown-item" routerLink="/destination/goa">Goa</a></li>
+            <li><a class="dropdown-item" routerLink="/destination/kerala">Kerala</a></li>
+            <li><a class="dropdown-item" routerLink="/destination/shimla">Shimla</a></li>
+            <li><a class="dropdown-item" routerLink="/destination/bali">Bali</a></li>
+          </ul>
+        </li>
+
+        <li
+          class="nav-item dropdown"
+          (mouseenter)="showServices = true"
+          (mouseleave)="showServices = false"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            [class.show]="showServices"
+            aria-expanded="showServices"
+            (click)="toggleDropdown('services')"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" [class.show]="showServices">
+            <li><a class="dropdown-item" routerLink="/services/hotel">Hotel Booking</a></li>
+            <li><a class="dropdown-item" routerLink="/services/bus">Bus Booking</a></li>
+            <li><a class="dropdown-item" routerLink="/services/car">Car Booking</a></li>
+            <li><a class="dropdown-item" routerLink="/services/flight">Flight Booking</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
