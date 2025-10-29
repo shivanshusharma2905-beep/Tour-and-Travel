@@ -1,21 +1,19 @@
-<div class="hero-section position-relative">
+<div class="hero-section">
   <div class="custom-carousel">
     <img [src]="images[currentImage]" class="carousel-img" alt="Travel Banner" />
   </div>
 
-  <div
-    class="hero-overlay position-absolute top-50 start-50 translate-middle d-flex flex-lg-row flex-column justify-content-center align-items-center text-white w-100 px-3 px-md-5"
-  >
-    <div class="hero-text-blur mb-4 me-lg-4 p-4 rounded-4 text-center text-lg-start">
+  <div class="hero-overlay d-flex align-items-center justify-content-center">
+    <div class="hero-inner container d-flex flex-lg-row flex-column align-items-stretch justify-content-center">
+      <div class="hero-text-blur p-4 rounded-4 text-white d-flex flex-column justify-content-center">
       <h1 class="display-5 fw-bold mb-3">Explore the World with Us</h1>
-      <p class="lead mb-0">
-        Let your soul wander — from tranquil beaches to majestic mountains, we plan your perfect escape.
-      </p>
-    </div>
+      <p class="lead mb-0"> Let your soul wander — from tranquil beaches to majestic mountains, we plan your perfect escape.</p>
+      </div>
 
-    <div class="hero-enquiry-blur p-4 rounded-4 shadow-lg w-100 w-md-75 w-lg-50">
+      <div class="hero-enquiry-blur p-4 rounded-4 shadow-lg mt-3 mt-lg-0">
       <app-enquiry></app-enquiry>
-    </div>
+      </div>
+    </div> 
   </div>
 </div>
 
@@ -32,7 +30,7 @@
           <img [src]="pkg.image" class="card-img-top" alt="package image" />
           <div class="img-overlay">
             <span class="badge bg-warning text-dark px-3 py-2 rounded-pill shadow-sm">
-              <!-- ₹{{ pkg.price }} / person -->
+            <!-- ₹{{ pkg.price }} / person -->
             </span>
           </div>
         </div>

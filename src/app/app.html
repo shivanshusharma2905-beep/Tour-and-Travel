@@ -1,5 +1,4 @@
 <app-navbar></app-navbar>
-
 <ng-container *ngIf="isHomePage; else innerLayout">
   <router-outlet></router-outlet>
 </ng-container>
@@ -7,15 +6,14 @@
 <ng-template #innerLayout>
   <div class="main-layout container-fluid py-4 px-lg-5">
     <div class="row g-4">
-      <!-- Main Content -->
-      <div class="col-md-8 col-lg-9 p-4 bg-white rounded-3 shadow-sm content-section">
-        <router-outlet></router-outlet>
+      <div
+      class="col-12 col-lg-8 p-4 bg-white rounded-3 shadow-sm content-section order-1 order-lg-1">
+      <router-outlet></router-outlet>
       </div>
 
-      <!-- Sidebar -->
-      <div class="col-md-4 col-lg-3">
-        <div class="sidebar-wrapper p-4 rounded-3 shadow-sm">
-          <app-side-space></app-side-space>
+      <div class="col-12 col-lg-4 order-2 order-lg-2">
+        <div class="sidebar-wrapper p-4 rounded-3 shadow-sm bg-light">
+        <app-side-space></app-side-space>
         </div>
       </div>
     </div>

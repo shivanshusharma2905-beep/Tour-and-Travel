@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Enquiry } from "../enquiry/enquiry";
+import { Enquiry } from "../../shared/enquiry/enquiry";
 
 @Component({
   selector: 'app-home',

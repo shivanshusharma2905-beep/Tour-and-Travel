@@ -1,4 +1,105 @@
-<div class="top-bar">
+<!-- Top bar (optional) -->
+<div class="top-bar d-none d-md-block">
+  <div class="container d-flex justify-content-between align-items-center small">
+    <div class="social-icons">
+      <a href="#" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="whatsapp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <div class="contact-info small">
+      <i class="bi bi-envelope me-1 text-warning"></i> enquiry@sstourandtravel.com
+      <span class="mx-2">|</span>
+      <i class="bi bi-telephone me-1 text-warning"></i> +91 9534098040
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-5" routerLink="/" (click)="closeNav()">
+      <i class="bi bi-airplane-fill me-2"></i>SS Tour & Travel
+    </a>
+
+    <!-- Hamburger toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-controls="navContent"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-label="Toggle navigation"
+      (click)="isCollapsed = !isCollapsed"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div id="navContent" class="collapse navbar-collapse" [class.show]="!isCollapsed">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" (click)="closeNav()">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" (click)="closeNav()">About</a>
+        </li>
+
+        <!-- Packages dropdown -->
+        <li class="nav-item dropdown" [class.show]="showPackages"
+            (mouseenter)="onHover('packages', true)" (mouseleave)="onHover('packages', false)">
+          <a class="nav-link dropdown-toggle"
+             role="button"
+             aria-haspopup="true"
+             [attr.aria-expanded]="showPackages"
+             (click)="toggleDropdown('packages')">
+            Packages
+          </a>
+
+          <ul class="dropdown-menu" [class.show]="showPackages">
+            <li><a class="dropdown-item" routerLink="/destination/goa" (click)="closeNav()">Goa</a></li>
+            <li><a class="dropdown-item" routerLink="/destination/kerala" (click)="closeNav()">Kerala</a></li>
+            <li><a class="dropdown-item" routerLink="/destination/shimla" (click)="closeNav()">Shimla</a></li>
+            <li><a class="dropdown-item" routerLink="/destination/bali" (click)="closeNav()">Bali</a></li>
+          </ul>
+        </li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown" [class.show]="showServices"
+            (mouseenter)="onHover('services', true)" (mouseleave)="onHover('services', false)">
+          <a class="nav-link dropdown-toggle"
+             role="button"
+             aria-haspopup="true"
+             [attr.aria-expanded]="showServices"
+             (click)="toggleDropdown('services')">
+            Services
+          </a>
+
+          <ul class="dropdown-menu" [class.show]="showServices">
+            <li><a class="dropdown-item" routerLink="/services/hotel" (click)="closeNav()">Hotel Booking</a></li>
+            <li><a class="dropdown-item" routerLink="/services/bus" (click)="closeNav()">Bus Booking</a></li>
+            <li><a class="dropdown-item" routerLink="/services/car" (click)="closeNav()">Car Booking</a></li>
+            <li><a class="dropdown-item" routerLink="/services/flight" (click)="closeNav()">Flight Booking</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog" (click)="closeNav()">Blog</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" (click)="closeNav()">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<!-- <div class="top-bar">
   <div class="container d-flex justify-content-between align-items-center flex-wrap small">
     <div class="social-icons mb-1 mb-md-0">
       <a href="#"><i class="bi bi-facebook"></i></a>
@@ -96,4 +197,4 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
